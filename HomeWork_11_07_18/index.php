@@ -203,8 +203,6 @@ function deleteNegatives2(&$argumentsAll2) {
     }
   }
   $argumentsAll2 = array_values($argumentsAll2);
-
-  return $argumentsAll2;
 }
 
 $digits2 = array(2, -10, -2, 4, -5, 1, 6, 200, 1.6, -95);
