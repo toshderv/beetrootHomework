@@ -198,9 +198,7 @@ echo '<h2>Задача 4: Удаление отрицательных элеме
  */
 function deleteNegatives2(&$argumentsAll2) {
   foreach ($argumentsAll2 as $keyArguments2 => $valueArguments2) {
-    if ($valueArguments2 > 0) {
-      $argumentsAll2[$keyArguments2] = $valueArguments2;
-    } else {
+    if ($valueArguments2 < 0) {
       unset($argumentsAll2[$keyArguments2]);      
     }
   }
