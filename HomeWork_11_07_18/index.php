@@ -193,8 +193,8 @@ echo '<h2>Задача 4: Удаление отрицательных элеме
 /**
  * Функция для вывода результатов пользователю его корзины
  * 
- * @param array $argumentsAll
- * @return array $argumentsPositive
+ * @param array &$argumentsAll2
+ * @return array $argumentsAll2
  */
 function deleteNegatives2(&$argumentsAll2) {
   foreach ($argumentsAll2 as $keyArguments2 => $valueArguments2) {
