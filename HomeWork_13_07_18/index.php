@@ -15,7 +15,10 @@ $strAfterExplode = explode(' ', $strBeforeExplode);
 foreach ($strAfterExplode as $valueArrayItemExplode) {
   echo $valueArrayItemExplode.'<br>';
 }
-echo '<br>';
+echo 'Или <br>';
+echo mb_substr($strBeforeExplode, 0, 4).'<br>';
+echo mb_substr($strBeforeExplode, 5, 3).'<br>';
+echo mb_substr($strBeforeExplode, 9, 3).'<br><br>';
 
 // Задача 4: Дана строка '30.11.2016'. Замените все точки на дефисы
 $strBeforeStrReplace = '30.11.2016';
