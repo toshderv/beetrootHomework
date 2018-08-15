@@ -18,45 +18,35 @@ class Books {
     $this->sort_order = $row['sort_order'];
   }
 
-  public static function setSortBy() {
+  final public static function setSortBy() {
     return self::$sortBy;
   }
 
-  public function printInfo() {
-    echo '<tr><td><img width="54" height="59" src="images/icons/default.png" alt="' . mb_strtolower(substr($this->type, 4)) . '"></td>';
-    echo '<td>' . $this->name . '</td>';
-    echo '<td>' . $this->author . '</td>';
-    echo '<td><a href="' . ltrim($this->file_path, '/') . 'books/' . $this->name . '.' . mb_strtolower(substr($this->type, 4)) . '" title="download ' . $this->name . '">Click me for download</a></td>';
-    echo '<td>Harry Potter is a series of fantasy novels written by British author J. K. Rowling...</td><tr>';
+  public function printInfo() {    
+    require 'view/layout/books.php';
   }
 }
 
 class BookTxt extends Books {
   final public function printInfo() {
-    echo '<tr><td><img width="54" height="59" src="images/icons/' . mb_strtolower(substr($this->type, 4)) . '.png" alt="' . mb_strtolower(substr($this->type, 4)) . '"></td>';
-    echo '<td>' . $this->name . '</td>';
-    echo '<td>' . $this->author . '</td>';
-    echo '<td><a href="' . ltrim($this->file_path, '/') . 'books/' . $this->name . '.' . mb_strtolower(substr($this->type, 4)) . '" title="download ' . $this->name . '">Click me for download</a></td>';
-    echo '<td>Harry Potter is a series of fantasy novels written by British author J. K. Rowling...</td><tr>';
+    require 'view/layout/books.php';
   }
 }
 
 class BookDoc extends Books {
   final public function printInfo() {
-    echo '<tr><td><img width="54" height="59" src="images/icons/' . mb_strtolower(substr($this->type, 4)) . '.png" alt="' . mb_strtolower(substr($this->type, 4)) . '"></td>';
-    echo '<td>' . $this->name . '</td>';
-    echo '<td>' . $this->author . '</td>';
-    echo '<td><a href="' . ltrim($this->file_path, '/') . 'books/' . $this->name . '.' . mb_strtolower(substr($this->type, 4)) . '" title="download ' . $this->name . '">Click me for download</a></td>';
-    echo '<td>Harry Potter is a series of fantasy novels written by British author J. K. Rowling...</td><tr>';
+    require 'view/layout/books.php';
   }
 }
 
 class BookPdf extends Books {
   final public function printInfo() {
-    echo '<tr><td><img src="images/icons/' . mb_strtolower(substr($this->type, 4)) . '.png" alt="' . mb_strtolower(substr($this->type, 4)) . '"></td>';
-    echo '<td>' . $this->name . '</td>';
-    echo '<td>' . $this->author . '</td>';
-    echo '<td><a href="' . ltrim($this->file_path, '/') . 'books/' . $this->name . '.' . mb_strtolower(substr($this->type, 4)) . '" title="download ' . $this->name . '">Click me for download</a></td>';
-    echo '<td>Harry Potter is a series of fantasy novels written by British author J. K. Rowling...</td><tr>';
+    require 'view/layout/books.php';
+  }
+}
+
+final class BookDefault extends Books {
+  final public function printInfo() {
+    require 'view/layout/books.php';
   }
 }

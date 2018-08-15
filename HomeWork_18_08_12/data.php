@@ -10,7 +10,7 @@ while ($row = $sql->fetch(PDO::FETCH_ASSOC)) {
   if (class_exists($row['type'])) {
     $bookList[] = new $row['type']($row);
   } else {
-    $bookList[] = new Books($row);
+    $bookList[] = new BookDefault($row);
   }
   
 }
